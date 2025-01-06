@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>House Price Prediction</title>
+</head>
+<body>
+    <h1>House Price Prediction</h1>
+    <form action="{{url_for('predict_datapoint')}}" method="post">
+        <label for="MedInc">Median Income:</label>
+        <input type="text" id="MedInc" name="MedInc"><br><br>
+
+        <label for="HouseAge">House Age:</label>
+        <input type="text" id="HouseAge" name="HouseAge"><br><br>
+
+        <label for="AveRooms">Average Rooms:</label>
+        <input type="text" id="AveRooms" name="AveRooms"><br><br>
+
+        <label for="Population">Population:</label>
+        <input type="text" id="Population" name="Population"><br><br>
+
+        <label for="AveOccup">Average Occupancy:</label>
+        <input type="text" id="AveOccup" name="AveOccup"><br><br>
+
+        <label for="Latitude">Latitude:</label>
+        <input type="text" id="Latitude" name="Latitude"><br><br>
+
+        <label for="Longitude">Longitude:</label>
+        <input type="text" id="Longitude" name="Longitude"><br><br>
+
+        <button type="submit">Predict</button>
+    </form>
+
+    <h2>Predicted Price: {{ price }}</h2>
+</body>
+</html>
